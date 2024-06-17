@@ -1,0 +1,159 @@
+{
+  "products": [
+    {
+      "title": "Nike",
+      "category": "Мужская обувь",
+      "description": "SPIDER-MAN",
+      "price": 180,
+      "image": "https://akn-barcin.a-cdn.akinoncloud.com/products/2023/07/24/1145579/18b77484-b62b-4ce1-9534-ec898be52492_size900x900_cropCenter.jpg",
+      "id": 1
+    },
+    {
+      "title": "Nike",
+      "category": "Мужская обувь",
+      "description": "RED/BLACK",
+      "price": 150,
+      "image": "https://shopigo.com/cdn/shop/products/air-jordan-1-low-bredsail-162575.jpg?v=1689318946",
+      "id": 2
+    },
+    {
+      "title": "Nike",
+      "category": "Мужская обувь",
+      "description": "BLUE",
+      "price": 150,
+      "image": "https://img-sneaksupincommerce.mncdn.com/Content/Images/Thumbs/0153467_jordan-air-1-mid-dq8426-515.jpeg",
+      "id": 3
+    },
+    {
+      "title": "Nike",
+      "category": "Мужская обувь",
+      "description": "Air Jordan 3",
+      "price": 180,
+      "image": "https://img-sneaksupincommerce.mncdn.com/Content/Images/Thumbs/0153829_jordan-air-4-retro-dh6927-161.jpeg",
+      "id": 4
+    },
+    {
+      "title": "Nike",
+      "category": "Мужская обувь",
+      "description": "Air Jordan 4",
+      "price": 180,
+      "image": "https://img-sneaksupincommerce.mncdn.com/Content/Images/Thumbs/0093066_jordan-air-jordan-4-retro-se-gs-dc4101-100.jpeg",
+      "id": 5
+    },
+    {
+      "title": "Nike",
+      "category": "Мужская обувь",
+      "description": "Air Jordan 1",
+      "price": 160,
+      "image": "https://img-sneaksupincommerce.mncdn.com/Content/Images/Thumbs/0148503_jordan-wmns-air-1-mid-bq6472-033.jpeg",
+      "id": 7
+    },
+    {
+      "title": "Nike",
+      "category": "Мужская обувь",
+      "description": "Air Jordan 5",
+      "price": 200,
+      "image": "https://img-sneaksupincommerce.mncdn.com/Content/Images/Thumbs/0109497_jordan-why-not-5-dc3637-500.jpeg",
+      "id": 8
+    },
+    {
+      "title": "Nike",
+      "category": "Женская обувь",
+      "description": "Air Max 97",
+      "price": 180,
+      "image": "https://akn-ss.a-cdn.akinoncloud.com/products/2023/10/16/14709619/f6e98934-2bb6-420b-afa6-044d32b056ae_size1400x1400_quality100.jpg",
+      "id": 9
+    },
+    {
+      "title": "Nike",
+      "category": "Женская обувь",
+      "description": "BLACK",
+      "price": 180,
+      "image": "https://img5.lalafo.com/i/posters/original/05/84/4d/2f93141ed25435961ee2fd5c31.jpeg",
+      "id": 10
+    },
+    {
+      "title": "       Футболка PUMA X PLAYSTATION",
+      "description": "Graphic Tee SS241",
+      "price": 12343,
+      "image": "https://api.pumakyrgyzstan.kg/uploads/products/webp/940-94062467601.webp",
+      "id": 11
+    },
+    {
+      "title": " Барсетка PUMA",
+      "description": "Classics Archive Compact Portable AW23",
+      "price": 12342,
+      "image": "https://api.pumakyrgyzstan.kg/uploads/products/webp/200-20007998201.webp",
+      "id": 12
+    },
+    {
+      "title": "Рюкзак Puma",
+      "description": "Academy Backpack SS23",
+      "price": 2344,
+      "image": "https://api.pumakyrgyzstan.kg/uploads/products/webp/940-94007913310.webp",
+      "id": 13
+    },
+    {
+      "title": " Шапка Puma",
+      "description": "ARCHIVE heather beanie AW22",
+      "price": 1234,
+      "image": "https://api.pumakyrgyzstan.kg/uploads/products/webp/940-94002173903.webp",
+      "id": 14
+    },
+    {
+      "title": "REAL MADRID 24/25 HOME JERSEY",
+      "description": "A LOS BLANCOS FAN JERSEY INSPIRED",
+      "price": 2343,
+      "image": "https://assets.adidas.com/images/w_600,f_auto,q_auto/bba09c80cdf3416c9957d5ea0dee0738_9366/Real_Madrid_24-25_Home_Jersey_White_IU5011_HM1.jpg",
+      "id": 15
+    },
+    {
+      "title": "Кроссовки Nike AIR MAX LTD 3",
+      "description": "vkrejwnfpeowinbvwsertyjukil'-[0;p9lokijuyhtgrfdewsaghio;lkijuhygtfds",
+      "price": 23234,
+      "image": "https://inter-sport.s3.amazonaws.com/products/687977/black_020/687977-1_resized_800X800.jpg",
+      "category ": "обувь",
+      "id": 16
+    },
+    {
+      "title": "  Кепка Puma",
+      "description": "Archive Logo BB Cap SS22",
+      "price": 2490,
+      "image": "https://api.pumakyrgyzstan.kg/uploads/products/webp/940-94002255415.webp",
+      "category ": "обувь",
+      "id": 17
+    },
+    {
+      "title": "Кроссовки PUMA",
+      "description": "PWRFrame TR 3 Wn's Animal Remix SS24",
+      "price": 12000,
+      "image": "https://api.pumakyrgyzstan.kg/uploads/products/webp/940-94037963401.webp",
+      "id": 18
+    },
+    {
+      "title": "Кепка Puma",
+      "description": "Trolls Cap SS241",
+      "price": 1790,
+      "image": "https://api.pumakyrgyzstan.kg/uploads/products/webp/940-94002515901.webp",
+      "id": 19
+    },
+    {
+      "title": "Жилетка PUMA",
+      "description": "ESS Padded Vest AW23",
+      "price": 4790,
+      "image": "https://api.pumakyrgyzstan.kg/uploads/products/webp/940-94084894163.webp",
+      "category": "Женская куртка",
+      "id": 20
+    }
+  ],
+  "category": [
+    {
+      "name": "Кепки",
+      "id": 1
+    },
+    {
+      "name": "Женская куртка",
+      "id": 2
+    }
+  ]
+}
