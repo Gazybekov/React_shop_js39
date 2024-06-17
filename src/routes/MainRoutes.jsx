@@ -1,16 +1,16 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "../pages/HomePage";
-import ProductList from "../components/products/ProductList";
 import EditProduct from "../components/products/EditProduct";
 import AboutPage from "../pages/AboutPage";
 import ContactsPage from "../pages/ContactsPage";
 import AdminPage from "../pages/AdminPage";
+import ProductPage from "../pages/ProductPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
     { id: 1, link: "/", element: <HomePage /> },
-    { id: 2, link: "/products", element: <ProductList /> },
+    { id: 2, link: "/products", element: <ProductPage /> },
     { id: 3, link: "/edit/:id", element: <EditProduct /> },
     { id: 4, link: "/about", element: <AboutPage /> },
     { id: 5, link: "/contacts", element: <ContactsPage /> },

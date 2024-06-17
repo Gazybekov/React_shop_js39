@@ -13,7 +13,7 @@ const ProductList = () => {
   }, []);
   console.log(products);
   // кол-во продуктов на одной странице
-  const itemPerPage = 4;
+  const itemPerPage = 6;
   // общее кол-во страниц
   const count = Math.ceil(products.length / itemPerPage);
   console.log(products);
