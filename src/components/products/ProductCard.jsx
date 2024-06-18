@@ -8,11 +8,15 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { useProduct } from "../../context/ProductContextProvider";
 import { useNavigate } from "react-router-dom";
-const ProductCard = ({ title, description, image, price, id }) => {
+import Detail from "./Detail";
+const ProductCard = ({ elem }) => {
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const { deleteProduct } = useProduct();
   return (
     <Card
@@ -23,8 +27,8 @@ const ProductCard = ({ title, description, image, price, id }) => {
         width: { md: "30vw", lg: "19vw" },
       }}
     >
-      <CardActionArea>
-        <CardMedia sx={{ height: 240, borderRadius: 4 }} image={image} />
+      <CardActionArea onClick={handleOpen}>
+        <CardMedia sx={{ height: 240, borderRadius: 4 }} image={elem.image} />
       </CardActionArea>
       <CardContent
         sx={{
@@ -36,27 +40,27 @@ const ProductCard = ({ title, description, image, price, id }) => {
         }}
       >
         <Typography variant="h5" fontSize="20" fontWeight={700} component="div">
-          {title}
+          {elem.title}
         </Typography>
         <Stack>
           <Rating name="half-rating" defaultValue={0} precision={1} />
         </Stack>
         <Typography color="black" fontSize="24px" fontWeight={700}>
-          {price}kgs
+          {elem.price}kgs
         </Typography>
         <Typography color="gray" fontSize="24px" fontWeight={700}>
-          {description}
+          {elem.description}
         </Typography>
         <Button
           color="secondary"
           variant="outlined"
           size="medium"
-          onClick={() => deleteProduct(id)}
+          onClick={() => deleteProduct(elem.id)}
         >
           Delete
         </Button>
         <Button
-          onClick={() => navigate(`/edit/${id}`)}
+          onClick={() => navigate(`/edit/${elem.id}`)}
           variant="outlined"
           color="primary"
           size="medium"
@@ -64,6 +68,7 @@ const ProductCard = ({ title, description, image, price, id }) => {
           Edit
         </Button>
       </CardContent>
+      <Detail elem={elem} open={open} handleClose={handleClose} />
     </Card>
   );
 };

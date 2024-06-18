@@ -3,8 +3,14 @@ import { useProduct } from "../../context/ProductContextProvider";
 import { Box } from "@mui/material";
 import ProductCard from "./ProductCard";
 import PagintaionContolled from "./Pagintaion";
+import { useSearchParams } from "react-router-dom";
 
 const ProductList = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  useEffect(() => {
+    getProducts();
+    setPage(1);
+  }, [searchParams]);
   const { getProducts, products } = useProduct();
   // текущая страница
   const [page, setPage] = useState(1);
@@ -29,7 +35,7 @@ const ProductList = () => {
     <div>
       <Box sx={{ display: "flex", flexWrap: "wrap" }}>
         {currentData().map((elem) => (
-          <ProductCard key={elem.id} {...elem} />
+          <ProductCard key={elem.id} elem={elem} />
         ))}
       </Box>
       <PagintaionContolled
