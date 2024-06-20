@@ -4,6 +4,7 @@ import {
   CardActionArea,
   CardContent,
   CardMedia,
+  IconButton,
   Rating,
   Stack,
   Typography,
@@ -12,7 +13,10 @@ import React, { useState } from "react";
 import { useProduct } from "../../context/ProductContextProvider";
 import { useNavigate } from "react-router-dom";
 import Detail from "./Detail";
+import { AddShoppingCart } from "@mui/icons-material";
+import { useCart } from "../../context/CartContextProvider";
 const ProductCard = ({ elem }) => {
+  const { addProductToCart } = useCart();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -67,6 +71,9 @@ const ProductCard = ({ elem }) => {
         >
           Edit
         </Button>
+        <IconButton onClick={() => addProductToCart(elem)}>
+          <AddShoppingCart />
+        </IconButton>
       </CardContent>
       <Detail elem={elem} open={open} handleClose={handleClose} />
     </Card>
