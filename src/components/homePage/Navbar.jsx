@@ -10,11 +10,19 @@ import Container from "@mui/material/Container";
 import Tooltip from "@mui/material/Tooltip";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
-import { MenuItem } from "@mui/material";
+import { Badge, MenuItem } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
+import { useCart } from "../../context/CartContextProvider";
+import { getProductsCountInCart } from "../../helpers/functions";
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [badgeCount, setBadgeCount] = React.useState(0);
+  const { addProductToCart } = useCart();
+  React.useEffect(() => {
+    setBadgeCount(getProductsCountInCart);
+  }, [addProductToCart]);
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -133,7 +141,9 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}></Box>
           <Link to={"/cart"}>
-            <ShoppingCart sx={{ color: "white" }} />
+            <Badge badgeContent={badgeCount} color="success">
+              <ShoppingCart sx={{ color: "white" }} />
+            </Badge>
           </Link>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

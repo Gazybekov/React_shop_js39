@@ -16,12 +16,17 @@ import Detail from "./Detail";
 import { AddShoppingCart } from "@mui/icons-material";
 import { useCart } from "../../context/CartContextProvider";
 const ProductCard = ({ elem }) => {
-  const { addProductToCart } = useCart();
+  const { addProductToCart, checkProductInCart, deleteProductFromCart } =
+    useCart();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const { deleteProduct } = useProduct();
+  const handleDelete = () => {
+    deleteProduct(elem.id);
+    deleteProductFromCart(elem.id);
+  };
   return (
     <Card
       sx={{
@@ -59,7 +64,7 @@ const ProductCard = ({ elem }) => {
           color="secondary"
           variant="outlined"
           size="medium"
-          onClick={() => deleteProduct(elem.id)}
+          onClick={handleDelete}
         >
           Delete
         </Button>
@@ -71,7 +76,13 @@ const ProductCard = ({ elem }) => {
         >
           Edit
         </Button>
-        <IconButton onClick={() => addProductToCart(elem)}>
+        <IconButton
+          sx={{
+            backgroundColor: checkProductInCart(elem.id) ? "black" : "",
+            color: checkProductInCart(elem.id) ? "white" : "",
+          }}
+          onClick={() => addProductToCart(elem)}
+        >
           <AddShoppingCart />
         </IconButton>
       </CardContent>

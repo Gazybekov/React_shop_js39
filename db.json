@@ -3,22 +3,6 @@
     {
       "title": "Nike",
       "category": "Мужская обувь",
-      "description": "SPIDER-MAN",
-      "price": 180,
-      "image": "https://akn-barcin.a-cdn.akinoncloud.com/products/2023/07/24/1145579/18b77484-b62b-4ce1-9534-ec898be52492_size900x900_cropCenter.jpg",
-      "id": 1
-    },
-    {
-      "title": "Nike",
-      "category": "Мужская обувь",
-      "description": "RED/BLACK",
-      "price": 150,
-      "image": "https://shopigo.com/cdn/shop/products/air-jordan-1-low-bredsail-162575.jpg?v=1689318946",
-      "id": 2
-    },
-    {
-      "title": "Nike",
-      "category": "Мужская обувь",
       "description": "BLUE",
       "price": 150,
       "image": "https://img-sneaksupincommerce.mncdn.com/Content/Images/Thumbs/0153467_jordan-air-1-mid-dq8426-515.jpeg",
