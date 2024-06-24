@@ -72,12 +72,12 @@ const CartContextProvider = ({ children }) => {
         products: [],
         totalPrice: 0,
       };
-      // обновляем состояние
-      dispatch({
-        type: "GET_CART",
-        payload: cart,
-      });
     }
+    // обновляем состояние
+    dispatch({
+      type: "GET_CART",
+      payload: cart,
+    });
   };
 
   // функция для проверки на наличие товара в корзине

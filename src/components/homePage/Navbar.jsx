@@ -14,6 +14,8 @@ import { Badge, MenuItem } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
 import { useCart } from "../../context/CartContextProvider";
 import { getProductsCountInCart } from "../../helpers/functions";
+import { useAuth } from "../../context/AuthContextProvider";
+import { ADMIN } from "../../helpers/const";
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -40,6 +42,11 @@ function Navbar() {
     { id: 4, title: "About", link: "/about" },
     { id: 5, title: "Contacts", link: "/contacts" },
   ];
+  const { user, handleLogOut, authListener } = useAuth();
+  React.useEffect(() => {
+    authListener();
+  }, []);
+
   return (
     <AppBar
       style={{ backgroundColor: "black", color: "white" }}
@@ -113,13 +120,13 @@ function Navbar() {
               </MenuItem>
             </Link>
           ))}
-
-          <Link to={"/admin"} style={{ textDecoration: "none" }}>
-            <MenuItem sx={{ color: "white", display: "block" }}>
-              <Typography textAlign={"center"}>ADMIN</Typography>
-            </MenuItem>
-          </Link>
-
+          {user.email === ADMIN ? (
+            <Link to={"/admin"} style={{ textDecoration: "none" }}>
+              <MenuItem sx={{ color: "white", display: "block" }}>
+                <Typography textAlign={"center"}>ADMIN</Typography>
+              </MenuItem>
+            </Link>
+          ) : null}
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
@@ -140,11 +147,27 @@ function Navbar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}></Box>
+          <Typography sx={{ color: "white" }}>
+            {user ? `Hello, ${user.email}!` : `Hello, Guest!`}
+          </Typography>
           <Link to={"/cart"}>
             <Badge badgeContent={badgeCount} color="success">
               <ShoppingCart sx={{ color: "white" }} />
             </Badge>
           </Link>
+
+          {user.email ? (
+            <MenuItem onClick={() => handleLogOut()}>
+              <Typography sx={{ color: "white" }}>LogOut</Typography>
+            </MenuItem>
+          ) : (
+            <Link to={"/auth"}>
+              <MenuItem>
+                <Typography sx={{ color: "white" }}>Register</Typography>
+              </MenuItem>
+            </Link>
+          )}
+
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton
